@@ -1,7 +1,7 @@
 # LineageOS 20 device tree — Rongyue E5 (Unisoc UMS9621 / qogirn6lite)
 
-LineageOS 20 (Android 13) device tree for the **Rongyue E5**, a 5G MiFi / pocket
-router built on the Unisoc **UMS9158 / UMS9621** (qogirn6lite) platform.
+LineageOS 20 (Android 13) device tree for the **Rongyue E5**, a smart phone
+ built on the Unisoc **UMS9158 / UMS9621** (qogirn6lite) platform.
 
 | | |
 |---|---|
@@ -9,13 +9,12 @@ router built on the Unisoc **UMS9158 / UMS9621** (qogirn6lite) platform.
 | Repository name | `android_device_rongyue_e5` |
 | Product | `ums9158_1h10_cmcc` |
 | Device / board | `ums9158_1h10` / `ums9621_1h10` |
-| SoC | Unisoc UMS9621 (qogirn6lite), 4×A55 + 4×A55 |
-| RAM / storage | 2 GB / 64 GB (`ro.boot.ddrsize=2048M`) |
+| SoC | Unisoc UMS9158 (qogirn6lite), 2×A76 + 6×A55 |
+| RAM / storage | 2 GB + 32GB (`ro.boot.ddrsize=2048M`) |
 | Display | 320×480, density 150 |
 | Stock OS | Android 13 (TP1A.220624.014, `ro.board.first_api_level=33`) |
 | Kernel | 5.15.211 (GKI, header v4), built from `kernel_sprd_ums9158` |
 | Partitioning | A/B, dynamic partitions (`super`), no recovery partition |
-| SELinux | permissive (stock is permissive too) |
 
 Everything in this tree was derived from the real device (adb root) and from
 binary/header analysis of the stock images — the source of each value is noted
@@ -299,30 +298,18 @@ and the init scripts are named after `ums9158_1h10`, not `e5`);
    they still resolve against the LineageOS `framework.jar` — they were built
    against the stock one.
 
-3. **Camera / fingerprint.** The kernel has no source for the camera group or
+3. **Camera** The kernel has no source for the camera group or
    `aw322xx_charger` (see `artifacts_e5/driver_gap_2026-09-12.md`), and the
    Unisoc camera stack is a prebuilt blob stack (`/odm/lib64/libcam*.so`,
-   `camera.ums9621.so`) driven by `sprd_camera.ko`. Expect camera and
-   fingerprint work to be a separate follow-up.
+   `camera.ums9621.so`) driven by `sprd_camera.ko`. Expect camera work to be a separate follow-up.
 
-4. **AVB.** `BOARD_AVB_ENABLE := true` with the AOSP test key and `--flags 3`
-   (hashtree + verification disabled). If the Unisoc bootloader rejects a
-   test-key vbmeta, set `BOARD_AVB_ENABLE := false` and flash the partitions
-   individually — the device boots fine without AVB.
-
-5. **Tethering / hotspot limits.** The stock ROM caps the number of concurrent
-   hotspots and pins the 5 GHz channel / hotspot IP (the two `荣悦E5…模块` zips in
-   the workspace patch this). Those live in `/vendor` and `/odm` blobs, so they
-   carry over unchanged; re-apply the modules after any vendor blob refresh.
-
-6. **`system_dlkm`.** Not built and not in the super group. If a later
+4. **`system_dlkm`.** Not built and not in the super group. If a later
    LineageOS change starts expecting it, add
    `BOARD_USES_SYSTEM_DLKMIMAGE := true`, add `system_dlkm` to
    `BOARD_UMS9621_DYNAMIC_PARTITIONS_PARTITION_LIST` and restore its fstab line.
 
-7. **recovery / vendor_boot.** Lineage recovery rides in the vendor ramdisk
-   (`BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true`), same as the
-   existing TWRP port for this device.
+5. **recovery / vendor_boot.** Lineage recovery rides in the vendor ramdisk
+   (`BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true`).
 
 ---
 
