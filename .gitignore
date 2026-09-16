@@ -1,0 +1,10 @@
+# Local working files
+*.orig
+*.rej
+*.bak
+*~
+
+# Artifacts pulled off the device while bringing the port up
+/probe/
+*.img
+*.zip

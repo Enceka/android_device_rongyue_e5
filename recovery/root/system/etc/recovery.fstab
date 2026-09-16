@@ -1,0 +1,26 @@
+# Recovery fstab for the Rongyue E5 (Unisoc UMS9621 / qogirn6lite).
+#
+# Lineage recovery mounts /system, /vendor and /data from here.  Logical
+# (super) partitions are addressed through /dev/block/mapper and need the
+# `logical` flag; everything else lives in /dev/block/by-name.
+#
+# <src>                                <mnt_point>    <type>  <mnt_flags>                                      <fs_mgr_flags>
+
+/dev/block/mapper/system               /system        erofs   ro                                               wait,slotselect,logical
+/dev/block/mapper/system               /system        ext4    ro,barrier=1                                     wait,slotselect,logical
+/dev/block/mapper/system_ext           /system_ext    erofs   ro                                               wait,slotselect,logical
+/dev/block/mapper/vendor               /vendor        erofs   ro                                               wait,slotselect,logical
+/dev/block/mapper/odm                  /odm           erofs   ro                                               wait,slotselect,logical
+/dev/block/mapper/product              /product       erofs   ro                                               wait,slotselect,logical
+/dev/block/mapper/vendor_dlkm          /vendor_dlkm   erofs   ro                                               wait,slotselect,logical
+
+/dev/block/by-name/boot                /boot          emmc    defaults                                         slotselect
+/dev/block/by-name/init_boot           /init_boot     emmc    defaults                                         slotselect
+/dev/block/by-name/vendor_boot         /vendor_boot   emmc    defaults                                         slotselect
+/dev/block/by-name/dtbo                /dtbo          emmc    defaults                                         slotselect
+/dev/block/by-name/vbmeta              /vbmeta        emmc    defaults                                         slotselect
+/dev/block/by-name/misc                /misc          emmc    defaults                                         defaults
+
+/dev/block/by-name/metadata            /metadata      f2fs    nodev,noatime,nosuid                             wait,formattable
+/dev/block/by-name/userdata            /data          f2fs    noatime,nosuid,nodev,discard                     wait,check,formattable
+/dev/block/by-name/cache               /cache         f2fs    noatime,nosuid,nodev,discard                     wait,check,formattable

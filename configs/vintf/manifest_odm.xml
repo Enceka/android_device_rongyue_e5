@@ -1,0 +1,31 @@
+<!--
+    Input:
+        manifest_disable_tui.xml
+        manifest_disable_soter.xml
+        manifest_disable_fp.xml
+        manifest_disable_fpmmi.xml
+        manifest_mdt.xml
+-->
+<manifest version="5.0" type="device">
+    <hal format="hidl" override="true">
+        <name>android.hardware.biometrics.fingerprint</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal format="aidl" override="true">
+        <name>vendor.sprd.hardware.fingerprintmmi</name>
+    </hal>
+    <hal format="aidl" override="true">
+        <name>vendor.sprd.hardware.soter</name>
+    </hal>
+    <hal format="aidl" override="true">
+        <name>vendor.sprd.hardware.tui</name>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.unisoc.hardware.radio.lite</name>
+        <interface>
+            <name>ILiteRadio</name>
+            <instance>liteservice2</instance>
+        </interface>
+        <fqname>ILiteRadio/liteservice2</fqname>
+    </hal>
+</manifest>
