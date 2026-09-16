@@ -179,6 +179,18 @@ BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := erofs
 BOARD_VENDOR_DLKMIMAGE_FILE_SYSTEM_TYPE := erofs
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 
+# Each partition above is a standalone logical partition in the stock layout, so
+# the build has to stage it under its own top-level directory.  Whenever a
+# BOARD_<part>IMAGE_FILE_SYSTEM_TYPE is set, board_config.mk requires the
+# matching TARGET_COPY_OUT_<part> to name that partition; the default is the
+# legacy 'system/<part>' subdirectory, and leaving it there aborts with
+#   "TARGET_COPY_OUT_VENDOR must be set to 'vendor' to use a vendor image."
+TARGET_COPY_OUT_VENDOR := vendor
+TARGET_COPY_OUT_SYSTEM_EXT := system_ext
+TARGET_COPY_OUT_PRODUCT := product
+TARGET_COPY_OUT_ODM := odm
+TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
+
 # ---------------------------------------------------------------------------
 # Dynamic partitions (super)
 #
