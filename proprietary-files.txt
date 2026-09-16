@@ -25,11 +25,20 @@
 #   * libsensor_*.so for the modules that are never present,
 #   * charger animation frames for the resolutions this 320x480 panel never uses.
 #
-# Totals: 2162 entries (vendor 1293, odm 612, system_ext 251, system 6).
+# Trimmed because the ROM builds them itself (shipping a prebuilt at the same
+# destination as a build output makes ninja fail with 'multiple rules generate',
+# or silently shadows the module the product resolved):
+#   * build/make/target/product/base_vendor.mk, which always installs its
+#     modules into $(TARGET_COPY_OUT_VENDOR),
+#   * system/core/shell_and_utilities (shell_and_utilities_vendor) -> /vendor/bin,
+#   * external/wpa_supplicant_8 (wpa_supplicant, hostapd and their libraries),
+#   * the apps under system_ext that packages/apps and frameworks/base provide.
+#
+# Totals: 2107 entries (vendor 1249, odm 612, system_ext 240, system 6).
 #
 
 # ===========================================================================
-# vendor (1293 files)
+# vendor (1249 files)
 # ===========================================================================
 
 # --- vendor/app  -  prebuilt vendor APKs ---
@@ -40,9 +49,6 @@ vendor/app/UASetting/UASetting.apk
 # --- vendor/bin  -  BSP tools and stand-alone daemons ---
 vendor/bin/VtsHalEnhanceTest
 vendor/bin/audiodumpclient
-vendor/bin/awk
-vendor/bin/boringssl_self_test32
-vendor/bin/boringssl_self_test64
 vendor/bin/btools
 vendor/bin/charge
 vendor/bin/charged
@@ -53,21 +59,18 @@ vendor/bin/cp_dump_dbg
 vendor/bin/cplogctl
 vendor/bin/create_splloader_dual_slot_byname_path.sh
 vendor/bin/dcxsrv
-vendor/bin/dumpsys
 vendor/bin/engpc
 vendor/bin/engpcctl
 vendor/bin/enhance_test
 vendor/bin/gpsd
 vendor/bin/init.insmod.sh
 vendor/bin/iwnpi
-vendor/bin/logwrapper
 vendor/bin/modem_control
 vendor/bin/modem_ctrl_dbg
 vendor/bin/nvmerge
 vendor/bin/phasecheckserver
 vendor/bin/refnotify
 vendor/bin/rpmbserver
-vendor/bin/sh
 vendor/bin/slogmodem_vendor
 vendor/bin/speedrestrictor.sh
 vendor/bin/sprdstorageproxyd
@@ -75,8 +78,6 @@ vendor/bin/srtd
 vendor/bin/systemDebuggerd
 vendor/bin/tee_rpc
 vendor/bin/thermald
-vendor/bin/toolbox
-vendor/bin/toybox_vendor
 vendor/bin/tsupplicant
 vendor/bin/tuica
 vendor/bin/uniber
@@ -91,7 +92,6 @@ vendor/bin/hw/android.hardware.audio.service
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
 vendor/bin/hw/android.hardware.bluetooth@1.1-service.unisoc
 vendor/bin/hw/android.hardware.camera.provider@2.4-service
-vendor/bin/hw/android.hardware.cas@1.2-service
 vendor/bin/hw/android.hardware.drm-service.clearkey
 vendor/bin/hw/android.hardware.drm-service.widevine
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service.software
@@ -100,14 +100,12 @@ vendor/bin/hw/android.hardware.graphics.composer@2.4-service
 vendor/bin/hw/android.hardware.health-service.example
 vendor/bin/hw/android.hardware.identity-service.trusty
 vendor/bin/hw/android.hardware.media.c2@1.1-unisoc-service
-vendor/bin/hw/android.hardware.media.omx@1.0-service
 vendor/bin/hw/android.hardware.power.stats-service.example
 vendor/bin/hw/android.hardware.rebootescrow-service.default
 vendor/bin/hw/android.hardware.security.keymint-service
 vendor/bin/hw/android.hardware.sensors-service.multihal
 vendor/bin/hw/android.hardware.usb-service.example
 vendor/bin/hw/android.hardware.wifi@1.0-service
-vendor/bin/hw/hostapd
 vendor/bin/hw/urild
 vendor/bin/hw/vendor.sprd.hardware.boot@1.2-service
 vendor/bin/hw/vendor.sprd.hardware.broadcastradio@2.0-service
@@ -128,7 +126,6 @@ vendor/bin/hw/vendor.sprd.hardware.tui-service
 vendor/bin/hw/vendor.sprd.hardware.vibrator-service
 vendor/bin/hw/vendor.sprd.hardware.wcn@1.0-service
 vendor/bin/hw/vendor.unisoc.hardware.power-service
-vendor/bin/hw/wpa_supplicant
 
 # --- vendor/bin/power  -  CPU / DDR / GPU power-tuning tools ---
 vendor/bin/power/cpu/fix_freq/fix_cpu_freq
@@ -298,7 +295,6 @@ vendor/etc/init/android.hardware.usb-service.example.rc
 vendor/etc/init/android.hardware.wifi.supplicant-service.rc
 vendor/etc/init/android.hardware.wifi@1.0-service.rc
 vendor/etc/init/autotest.rc
-vendor/etc/init/boringssl_self_test.rc
 vendor/etc/init/charge.rc
 vendor/etc/init/charged.rc
 vendor/etc/init/connmgr.rc
@@ -307,7 +303,6 @@ vendor/etc/init/cplog_svc-default.rc
 vendor/etc/init/dcxsrv.rc
 vendor/etc/init/engpc.rc
 vendor/etc/init/enhance-default.rc
-vendor/etc/init/hostapd.android.rc
 vendor/etc/init/hw/init.cali.rc
 vendor/etc/init/hw/init.ram.gms.rc
 vendor/etc/init/hw/init.ram.native.rc
@@ -800,7 +795,6 @@ vendor/lib/libcodec2_unisoc_vp8dec.so
 vendor/lib/libcodec2_unisoc_vp9dec.so
 vendor/lib/libcodec2_vndk.so
 vendor/lib/libdrm.so
-vendor/lib/libeffects.so
 vendor/lib/libeffectsconfig.so
 vendor/lib/libeic_trusty.so
 vendor/lib/libeng_tok.so
@@ -919,8 +913,6 @@ vendor/lib/libvorbisidec.so
 vendor/lib/libvpx.so
 vendor/lib/libvsp_ca.so
 vendor/lib/libwcn-vendor.so
-vendor/lib/libwifi-hal.so
-vendor/lib/libwpa_client.so
 vendor/lib/libwvaidl.so
 vendor/lib/oemlock_ca.so
 vendor/lib/shared-file-region-aidl-cpp.so
@@ -972,7 +964,6 @@ vendor/lib/hw/bootctrl.default.so
 vendor/lib/hw/dpu.unisoc.so
 vendor/lib/hw/enhance.unisoc.so
 vendor/lib/hw/gps.default.so
-vendor/lib/hw/gralloc.default.so
 vendor/lib/hw/gsp.unisoc.so
 vendor/lib/hw/hwcomposer.unisoc.so
 vendor/lib/hw/liblowi_wifihal.so
@@ -988,12 +979,6 @@ vendor/lib/hw/vendor.sprd.hardware.thermal@2.0-impl.so
 vendor/lib/hw/vendor.sprd.hardware.trusty-impl.so
 vendor/lib/hw/vendor.sprd.hardware.wcn@1.0-impl.so
 vendor/lib/hw/vibrator.default.so
-
-# --- vendor/lib/mediacas  -  media CAS plugin ---
-vendor/lib/mediacas/libclearkeycasplugin.so
-
-# --- vendor/lib/mediadrm  -  media DRM plugins ---
-vendor/lib/mediadrm/libdrmclearkeyplugin.so
 
 # --- vendor/lib/npidevice  -  NPU device libraries ---
 vendor/lib/npidevice/PQTune.ums9621.so
@@ -1039,16 +1024,8 @@ vendor/lib/npidevice/nativemmifinger.so
 
 # --- vendor/lib/soundfx  -  32-bit audio effect libraries ---
 vendor/lib/soundfx/libaudiopreprocessing.so
-vendor/lib/soundfx/libbundlewrapper.so
 vendor/lib/soundfx/libbundlewrapper2.so
-vendor/lib/soundfx/libdownmix.so
-vendor/lib/soundfx/libdynproc.so
-vendor/lib/soundfx/libeffectproxy.so
-vendor/lib/soundfx/libhapticgenerator.so
-vendor/lib/soundfx/libldnhncr.so
-vendor/lib/soundfx/libreverbwrapper.so
 vendor/lib/soundfx/libsprdvoiceprocessing.so
-vendor/lib/soundfx/libvisualizer.so
 
 # --- vendor/lib64  -  64-bit vendor shared libraries ---
 vendor/lib64/android.frameworks.cameraservice.common@2.0.so
@@ -1175,7 +1152,6 @@ vendor/lib64/libcodec2_vndk.so
 vendor/lib64/libcppbor_external.so
 vendor/lib64/libcppcose_rkp.so
 vendor/lib64/libdrm.so
-vendor/lib64/libeffects.so
 vendor/lib64/libeffectsconfig.so
 vendor/lib64/libeic_trusty.so
 vendor/lib64/libeng_tok.so
@@ -1194,8 +1170,6 @@ vendor/lib64/libkernelbootcp.trusty.so
 vendor/lib64/libkeymaster_messages.so
 vendor/lib64/libkeymaster_portable.so
 vendor/lib64/libkeymint.so
-vendor/lib64/libkeystore-engine-wifi-hidl.so
-vendor/lib64/libkeystore-wifi-hidl.so
 vendor/lib64/liblcsagent.so
 vendor/lib64/liblcscp.so
 vendor/lib64/liblcsmgt.so
@@ -1268,8 +1242,6 @@ vendor/lib64/libvibrator.so
 vendor/lib64/libvideo_share_memory.so
 vendor/lib64/libvsp_ca.so
 vendor/lib64/libwcn-vendor.so
-vendor/lib64/libwifi-hal.so
-vendor/lib64/libwpa_client.so
 vendor/lib64/oemlock_ca.so
 vendor/lib64/power.sprd.so
 vendor/lib64/shared-file-region-aidl-cpp.so
@@ -1325,7 +1297,6 @@ vendor/lib64/hw/bootctrl.default.so
 vendor/lib64/hw/dpu.unisoc.so
 vendor/lib64/hw/enhance.unisoc.so
 vendor/lib64/hw/gps.default.so
-vendor/lib64/hw/gralloc.default.so
 vendor/lib64/hw/gsp.unisoc.so
 vendor/lib64/hw/hwcomposer.unisoc.so
 vendor/lib64/hw/liblowi_wifihal.so
@@ -1342,12 +1313,6 @@ vendor/lib64/hw/vendor.sprd.hardware.trusty-impl.so
 vendor/lib64/hw/vendor.sprd.hardware.wcn@1.0-impl.so
 vendor/lib64/hw/vibrator.default.so
 
-# --- vendor/lib64/mediacas  -  media CAS plugin ---
-vendor/lib64/mediacas/libclearkeycasplugin.so
-
-# --- vendor/lib64/mediadrm  -  media DRM plugins ---
-vendor/lib64/mediadrm/libdrmclearkeyplugin.so
-
 # --- vendor/lib64/npidevice  -  NPU device libraries ---
 vendor/lib64/npidevice/PQTune.ums9621.so
 vendor/lib64/npidevice/autotestwifi.so
@@ -1360,15 +1325,7 @@ vendor/lib64/npidevice/libsoter_checkx.so
 
 # --- vendor/lib64/soundfx  -  64-bit audio effect libraries ---
 vendor/lib64/soundfx/libaudiopreprocessing.so
-vendor/lib64/soundfx/libbundlewrapper.so
 vendor/lib64/soundfx/libbundlewrapper2.so
-vendor/lib64/soundfx/libdownmix.so
-vendor/lib64/soundfx/libdynproc.so
-vendor/lib64/soundfx/libeffectproxy.so
-vendor/lib64/soundfx/libhapticgenerator.so
-vendor/lib64/soundfx/libldnhncr.so
-vendor/lib64/soundfx/libreverbwrapper.so
-vendor/lib64/soundfx/libvisualizer.so
 
 # --- vendor/media  -  media asset ---
 vendor/media/engtest_sample.pcm
@@ -2060,7 +2017,7 @@ odm/usr/idc/madev.idc
 odm/usr/keylayout/madev.kl
 
 # ===========================================================================
-# system_ext (251 files)
+# system_ext (240 files)
 # ===========================================================================
 
 # --- system_ext/app  -  Unisoc system_ext apps ---
@@ -2077,7 +2034,6 @@ system_ext/app/TuiAuxiService/TuiAuxiService.apk
 system_ext/app/USCPhotosProvider/USCPhotosProvider.apk
 system_ext/app/UnisocStk/UnisocStk.apk
 system_ext/app/ValidationTools/ValidationTools.apk
-system_ext/app/WAPPushManager/WAPPushManager.apk
 
 # --- system_ext/bin  -  Unisoc system_ext binaries ---
 system_ext/bin/apdumper
@@ -2127,7 +2083,6 @@ system_ext/bin/ylogksg
 
 # --- system_ext/etc  -  system_ext configuration ---
 system_ext/etc/buffdump.conf
-system_ext/etc/compatconfig/settings-platform-compat-config.xml
 system_ext/etc/decompress.py
 system_ext/etc/phonedump.conf
 system_ext/etc/vilte/vertical_480.raw
@@ -2309,28 +2264,19 @@ system_ext/lib64/vendor.unisoc.hardware.radio.lite-V1-ndk.so
 system_ext/lib64/vendor.unisoc.hardware.radio.modem-V1-ndk.so
 
 # --- system_ext/priv-app  -  Unisoc privileged apps ---
-system_ext/priv-app/CarrierConfig/CarrierConfig.apk
-system_ext/priv-app/EmergencyInfo/EmergencyInfo.apk
 system_ext/priv-app/Launcher3QuickStep/Launcher3QuickStep.apk
 system_ext/priv-app/NetworkSliceAgent/NetworkSliceAgent.apk
 system_ext/priv-app/OmacpPrebuilt/OmacpPrebuilt.apk
 system_ext/priv-app/PowerSaveModeLauncherPrebuilt/PowerSaveModeLauncherPrebuilt.apk
-system_ext/priv-app/Provision/Provision.apk
-system_ext/priv-app/RemoteProvisioner/RemoteProvisioner.apk
 system_ext/priv-app/ServiceUniWifiResources/ServiceUniWifiResources.apk
-system_ext/priv-app/Settings/Settings.apk
 system_ext/priv-app/SprdCalendarProviderPrebuilt/SprdCalendarProviderPrebuilt.apk
 system_ext/priv-app/SprdContacts/SprdContacts.apk
 system_ext/priv-app/SprdContactsProvider/SprdContactsProvider.apk
 system_ext/priv-app/SprdDialer/SprdDialer.apk
 system_ext/priv-app/Srmi/Srmi.apk
-system_ext/priv-app/StorageManager/StorageManager.apk
-system_ext/priv-app/SystemUI/SystemUI.apk
-system_ext/priv-app/ThemePicker/ThemePicker.apk
 system_ext/priv-app/UniSilentReboot/UniSilentReboot.apk
 system_ext/priv-app/UniTelephony/UniTelephony.apk
 system_ext/priv-app/UniWifiDialog/UniWifiDialog.apk
-system_ext/priv-app/WallpaperCropper/WallpaperCropper.apk
 system_ext/priv-app/ims/ims.apk
 system_ext/priv-app/radio_interactor_service/radio_interactor_service.apk
 
