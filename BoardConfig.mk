@@ -9,14 +9,16 @@ DEVICE_PATH := device/rongyue/e5
 # ---------------------------------------------------------------------------
 # Architecture
 #
-# UMS9621 / qogirn6lite is a 4x Cortex-A55 + 4x Cortex-A55 SoC (armv8-2a).
+# UMS9621 / qogirn6lite is a big.LITTLE armv8-2a SoC: /proc/cpuinfo reports six
+# Cortex-A55 (CPU part 0xd05) and two Cortex-A76 (CPU part 0xd0b), which also
+# matches the stock dalvik.vm.isa.arm64.variant=cortex-a76.
 # ---------------------------------------------------------------------------
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := generic
-TARGET_CPU_VARIANT_RUNTIME := cortex-a55
+TARGET_CPU_VARIANT_RUNTIME := cortex-a76
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-2a

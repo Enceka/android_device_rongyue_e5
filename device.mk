@@ -6,6 +6,19 @@
 
 DEVICE_PATH := device/rongyue/e5
 
+# Inherit generic_ramdisk product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
+
+# Project ID Quota
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
+# Dalvik VM Configuration
+#
+# The stock ROM reports heapstartsize 8m / heapgrowthlimit 192m / heapsize 512m
+# / heapminfree 512k / heapmaxfree 8m -- exactly this variant -- and the device
+# has MemTotal 1488940 kB.
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+
 # ---------------------------------------------------------------------------
 # API level
 #
