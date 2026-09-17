@@ -50,6 +50,39 @@ PRODUCT_BUILD_SUPER_PARTITION := true
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # ---------------------------------------------------------------------------
+# HALs
+#
+# These are the AOSP implementations.  The stock vendor partition shipped
+# Unisoc copies under the same module names; those were dropped from
+# proprietary-files.txt, so the product has to build them here.
+#
+# Deliberately not listed, because this device keeps the vendor's own:
+#   android.hardware.graphics.allocator@4.0-service  - no generic AOSP module
+#     exists (only a Tensor-specific one), so the vendor blob is the only copy
+#   android.hardware.gnss@2.1-service, android.hardware.thermal@2.0-service,
+#   android.hardware.boot@1.2-service, ...           - served by vendor.sprd.*
+# ---------------------------------------------------------------------------
+PRODUCT_PACKAGES += \
+    android.hardware.audio.service \
+    android.hardware.biometrics.fingerprint@2.1-service \
+    android.hardware.camera.provider@2.4-service \
+    android.hardware.drm-service.clearkey \
+    android.hardware.gatekeeper@1.0-service.software \
+    android.hardware.graphics.composer@2.4-service \
+    android.hardware.health-service.example \
+    android.hardware.power.stats-service.example \
+    android.hardware.rebootescrow-service.default \
+    android.hardware.security.keymint-service \
+    android.hardware.sensors-service.multihal \
+    android.hardware.usb-service.example \
+    android.hardware.wifi@1.0-service
+
+# Wi-Fi supplicant stack, from external/wpa_supplicant_8
+PRODUCT_PACKAGES += \
+    hostapd \
+    wpa_supplicant
+
+# ---------------------------------------------------------------------------
 # First-stage mount
 #
 # The stock vendor_boot ramdisk ships first_stage_ramdisk/fstab.ums9158_1h10
