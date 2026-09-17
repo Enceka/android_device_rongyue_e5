@@ -286,7 +286,9 @@ TARGET_SCREEN_DENSITY := 150
 # ---------------------------------------------------------------------------
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor_persist.prop
-TARGET_ODM_PROP += $(DEVICE_PATH)/configs/properties/odm.prop
+# configs/properties/odm.prop (ro.odm.oemcrypto.enabled) was dropped; add it
+# back here if it turns out to be needed.
+# TARGET_ODM_PROP += $(DEVICE_PATH)/configs/properties/odm.prop
 
 # ---------------------------------------------------------------------------
 # Debug
