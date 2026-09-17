@@ -274,6 +274,19 @@ TARGET_SCREEN_WIDTH := 320
 TARGET_SCREEN_DENSITY := 150
 
 # ---------------------------------------------------------------------------
+# Properties
+#
+# The stock vendor/odm build.prop is not extracted (the build regenerates it)
+# and is not readable over adb, so the device properties it carried -- notably
+# the ro.hardware.<class> names the HAL loader uses to pick the vendor module,
+# and the modem / camera / WCN device nodes -- have to be declared explicitly.
+# See configs/properties/.
+# ---------------------------------------------------------------------------
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor_persist.prop
+TARGET_ODM_PROP += $(DEVICE_PATH)/configs/properties/odm.prop
+
+# ---------------------------------------------------------------------------
 # Debug
 # ---------------------------------------------------------------------------
 TARGET_USES_LOGD := true

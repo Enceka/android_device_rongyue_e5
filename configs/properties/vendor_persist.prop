@@ -1,0 +1,152 @@
+#
+# Copyright (C) 2026 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+# Reconstructed from the stock ROM's /vendor/build.prop, which is not part of
+# proprietary-files.txt (the build regenerates it) and is not readable over
+# adb on the stock build.  Values come from `adb shell getprop` on the device.
+#
+
+# Defaults for the persisted vendor properties (wiped on a clean install).
+
+# --- aprservice  -  APR service ---
+persist.vendor.aprservice.enabled=0
+
+# --- audio  -  audio ---
+persist.vendor.audio.boot_completed=1
+persist.vendor.audio.hifi_enabled=false
+
+# --- bl  -  bootloader ---
+persist.vendor.bl.max=255
+
+# --- bsservice  -  beacon service ---
+persist.vendor.bsservice.enable=1
+
+# --- cam  -  camera ---
+persist.vendor.cam.ai.scence.enable=2
+persist.vendor.cam.api.version=0
+persist.vendor.cam.at.enable=true
+persist.vendor.cam.autovideoblur.enable=0
+persist.vendor.cam.ba.blur.version=1
+persist.vendor.cam.ba.portrait.enable=1
+persist.vendor.cam.back.high.resolution.mode=0
+persist.vendor.cam.blur.fast.thumb=1
+persist.vendor.cam.bokeh.hdmf=0
+persist.vendor.cam.cnr.mode=1
+persist.vendor.cam.dcam.mipi.raw.align=16
+persist.vendor.cam.dual.view.video.enable=0
+persist.vendor.cam.dv.ba.eispro.enable=1
+persist.vendor.cam.ev.20.enable=1
+persist.vendor.cam.facebeauty.corp=2
+persist.vendor.cam.faceid.version=1
+persist.vendor.cam.fast.thumb=11111
+persist.vendor.cam.fd.enable=true
+persist.vendor.cam.focus.distance=300
+persist.vendor.cam.fov.fusion.enable=1
+persist.vendor.cam.fr.blur.version=1
+persist.vendor.cam.fr.portrait.enable=1
+persist.vendor.cam.front.high.resolution.mode=0
+persist.vendor.cam.hdr.cnr.mode=1
+persist.vendor.cam.hdr.version=2
+persist.vendor.cam.hdr.zsl=1
+persist.vendor.cam.ip.OpticsZoom=0
+persist.vendor.cam.ip.dualview.pro=0
+persist.vendor.cam.ip.eis.pro=1
+persist.vendor.cam.ip.portrait.back.replace=2
+persist.vendor.cam.ip.single.portrait=1
+persist.vendor.cam.ip.switch.on=0
+persist.vendor.cam.ip.video.beauty=2
+persist.vendor.cam.ip.warp=2
+persist.vendor.cam.iss.serverready=1
+persist.vendor.cam.lightportrait.ba.enable=2
+persist.vendor.cam.lightportrait.fr.enable=2
+persist.vendor.cam.mfnr.version=3
+persist.vendor.cam.multi.camera.enable=0
+persist.vendor.cam.multi.section=3
+persist.vendor.cam.multi.video.max.zoom=18.0
+persist.vendor.cam.multicam.cali.veri=1
+persist.vendor.cam.multiv2.sensorstandby=1
+persist.vendor.cam.multiv2.sensorstandby.video=0
+persist.vendor.cam.night.pro.enable=0
+persist.vendor.cam.opticszoom.cali.mode=3
+persist.vendor.cam.pm.param_rebuild=1
+persist.vendor.cam.portrait.scene.enable=2
+persist.vendor.cam.raw.output.enable=1
+persist.vendor.cam.res.bokeh=RES_8M
+persist.vendor.cam.res.multi.camera=RES_MULTI
+persist.vendor.cam.sensitivityRange.id0=50,7000
+persist.vendor.cam.sensitivityRange.id1=50,6000
+persist.vendor.cam.sensor.tuning.id0=sp5508
+persist.vendor.cam.sensor.tuning.id1=c2599
+persist.vendor.cam.sensor.tuning.id2=
+persist.vendor.cam.sensor.tuning.id3=
+persist.vendor.cam.sensor.tuning.id4=
+persist.vendor.cam.sensor.tuning.id5=
+persist.vendor.cam.sensor.tuning.list=id0,sp5508;id1,c2599
+persist.vendor.cam.singleportrait.hdmf=0
+persist.vendor.cam.slowmotion.960fps.enable=1
+persist.vendor.cam.sprdUltraDistortionCorrectEnable=0
+persist.vendor.cam.telwin.enable=0
+persist.vendor.cam.totalscene.control=0
+persist.vendor.cam.tuning.id=0
+persist.vendor.cam.ultra.wide.enable=2
+persist.vendor.cam.video.face.beauty.enable=2
+persist.vendor.cam.video60fps.enable=0
+persist.vendor.cam.wt.enable=0
+persist.vendor.cam.xdr.enable=0
+
+# --- debug  -  debug ---
+persist.vendor.debug.fp.support=false
+
+# --- eng  -  engineering mode ---
+persist.vendor.eng.jeita=1
+persist.vendor.eng.reset=2
+persist.vendor.eng.reset.switch=0
+
+# --- faceid  -  face unlock ---
+persist.vendor.faceid.livenessgrade=2
+
+# --- modem  -  modem ---
+persist.vendor.modem.log_dest=2
+persist.vendor.modem.nr.enable=1
+persist.vendor.modem.nvp=nr_
+
+# --- powerhint  -  power hint ---
+persist.vendor.powerhint.hint.enable=true
+
+# --- radio  -  radio ---
+persist.vendor.radio.airplanemode.enable=0,0
+persist.vendor.radio.mdrec.simpin.cache=0
+persist.vendor.radio.modem.capability=NR_TL_LF_W_G,NR_TL_LF_W_G
+persist.vendor.radio.modem.config=NR_TL_LF_W_G,NR_TL_LF_W_G
+persist.vendor.radio.modem.workmode=128,134
+persist.vendor.radio.nitz.info.sim1=46000=中国移动=中国移动
+persist.vendor.radio.phone_count=2
+persist.vendor.radio.primarysim=0
+persist.vendor.radio.tele.optimization=true
+
+# --- sprd_blk_debug  -  block layer debug ---
+persist.vendor.sprd_blk_debug=0
+
+# --- sys  -  framework / system ---
+persist.vendor.sys.isfirstboot=0
+persist.vendor.sys.mdt.enable=1
+persist.vendor.sys.modem.diag=disable
+persist.vendor.sys.modem.io_limit=1
+persist.vendor.sys.modem.save_dump=1
+persist.vendor.sys.modemreset=1
+persist.vendor.sys.single.imsstack=true
+persist.vendor.sys.volte.enable=true
+persist.vendor.sys.wac.enable=true
+persist.vendor.sys.wcnreset=1
+persist.vendor.sys.wcnstate=0
+
+# --- sysdump  -  system dump ---
+persist.vendor.sysdump=off
+
+# --- use ---
+persist.vendor.use.engpc.5g=true
+
+# --- wcn  -  WCN (Wi-Fi / BT / FM) ---
+persist.vendor.wcn.log_dest=2
