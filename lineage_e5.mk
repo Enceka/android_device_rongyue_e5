@@ -5,6 +5,13 @@
 #
 
 # Inherit from those products. Most specific first.
+#
+# The AOSP product base has to be inherited explicitly: LineageOS' own
+# vendor/lineage/config/common*.mk only adds the Lineage packages on top and
+# never pulls in build/make/target/product/base*.mk.  Without these two lines
+# the product has ~160 packages instead of ~890 and no init/vendor base at all.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, device/rongyue/e5/device.mk)
 
