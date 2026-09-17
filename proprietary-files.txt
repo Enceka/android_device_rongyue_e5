@@ -39,11 +39,10 @@
 # Blobs that implement an AOSP-named HAL but are Unisoc's own code stay, and so
 # do the AOSP interface libraries that those blobs still link against.
 #
-# Totals: 1928 entries (vendor 1075, odm 607, system_ext 240, system 6).
+# Totals: 1776 entries (vendor 930, odm 607, system_ext 233, system 6).
 #
-
 # ===========================================================================
-# vendor (1075 files)
+# vendor (930 files)
 # ===========================================================================
 
 # --- vendor/app  -  prebuilt vendor APKs ---
@@ -86,8 +85,6 @@ vendor/bin/thermald
 vendor/bin/tsupplicant
 vendor/bin/tuica
 vendor/bin/uniber
-vendor/bin/vndservice
-vendor/bin/vndservicemanager
 vendor/bin/yloglite
 vendor/bin/yloglitectl
 vendor/bin/yloglitekat
@@ -339,8 +336,6 @@ vendor/etc/parameter-framework/Structure/Policy/audio_PolicySubsystem.xml
 vendor/etc/permissions/android.hardware.bluetooth_le.xml
 vendor/etc/permissions/android.hardware.broadcastradio.xml
 vendor/etc/permissions/android.hardware.fingerprint.xml
-vendor/etc/permissions/android.hardware.hardware_keystore.xml
-vendor/etc/permissions/android.hardware.identity_credential.xml
 vendor/etc/permissions/android.hardware.location.gps.xml
 vendor/etc/permissions/android.hardware.opengles.aep.xml
 vendor/etc/permissions/android.hardware.reboot_escrow.xml
@@ -634,60 +629,14 @@ vendor/firmware/sp5508/video0/EE_20577.bin
 vendor/framework/androidx.camera.extensions.impl.jar
 
 # --- vendor/lib  -  32-bit vendor shared libraries ---
-vendor/lib/android.frameworks.sensorservice@1.0.so
-vendor/lib/android.hardware.audio.common-util.so
-vendor/lib/android.hardware.audio.common@7.0-enums.so
-vendor/lib/android.hardware.audio.common@7.0-util.so
-vendor/lib/android.hardware.audio.common@7.0.so
-vendor/lib/android.hardware.audio.effect@7.0.so
-vendor/lib/android.hardware.audio@7.0-util.so
-vendor/lib/android.hardware.audio@7.0.so
-vendor/lib/android.hardware.boot@1.0.so
-vendor/lib/android.hardware.boot@1.1.so
-vendor/lib/android.hardware.boot@1.2.so
-vendor/lib/android.hardware.camera.common@1.0.so
-vendor/lib/android.hardware.camera.device@1.0.so
-vendor/lib/android.hardware.camera.device@3.2.so
-vendor/lib/android.hardware.camera.device@3.3.so
-vendor/lib/android.hardware.camera.device@3.4.so
-vendor/lib/android.hardware.camera.device@3.5.so
-vendor/lib/android.hardware.camera.device@3.6.so
 vendor/lib/android.hardware.camera.provider@2.4-external-sprd.so
 vendor/lib/android.hardware.camera.provider@2.4-legacy-sprd.so
-vendor/lib/android.hardware.camera.provider@2.4.so
-vendor/lib/android.hardware.cas.native@1.0.so
-vendor/lib/android.hardware.cas@1.0.so
-vendor/lib/android.hardware.gnss.measurement_corrections@1.0.so
-vendor/lib/android.hardware.gnss.measurement_corrections@1.1.so
-vendor/lib/android.hardware.gnss.visibility_control@1.0.so
-vendor/lib/android.hardware.gnss@1.0.so
-vendor/lib/android.hardware.gnss@1.1.so
-vendor/lib/android.hardware.gnss@2.0.so
-vendor/lib/android.hardware.gnss@2.1.so
-vendor/lib/android.hardware.media.c2@1.0.so
-vendor/lib/android.hardware.media.c2@1.1.so
-vendor/lib/android.hardware.radio.deprecated@1.0.so
-vendor/lib/android.hardware.radio@1.0.so
-vendor/lib/android.hardware.radio@1.1.so
-vendor/lib/android.hardware.radio@1.2.so
-vendor/lib/android.hardware.secure_element@1.0.so
-vendor/lib/android.hardware.sensors@1.0.so
-vendor/lib/android.hardware.sensors@2.0-ScopedWakelock.so
-vendor/lib/android.hardware.sensors@2.0.so
-vendor/lib/android.hardware.sensors@2.1.so
 vendor/lib/android.hardware.sensors@2.X-sprd_subhal.so
-vendor/lib/android.hardware.thermal@1.0.so
-vendor/lib/android.hardware.thermal@2.0.so
-vendor/lib/android.hidl.allocator@1.0.so
-vendor/lib/android.media.audio.common.types-V1-cpp.so
 vendor/lib/arm.graphics-V1-ndk.so
 vendor/lib/arm.graphics-V1-ndk_platform.so
 vendor/lib/arm.graphics-V2-ndk.so
 vendor/lib/arm.graphics-V2-ndk_platform.so
 vendor/lib/arm.graphics-V3-ndk.so
-vendor/lib/audioclient-types-aidl-cpp.so
-vendor/lib/av-types-aidl-cpp.so
-vendor/lib/camera.device@1.0-impl.so
 vendor/lib/camera.device@3.2-impl-sprd.so
 vendor/lib/camera.device@3.3-impl-sprd.so
 vendor/lib/camera.device@3.4-external-impl-sprd.so
@@ -695,7 +644,6 @@ vendor/lib/camera.device@3.4-impl-sprd.so
 vendor/lib/camera.device@3.5-external-impl-sprd.so
 vendor/lib/camera.device@3.5-impl-sprd.so
 vendor/lib/camera.device@3.6-external-impl-sprd.so
-vendor/lib/framework-permission-aidl-cpp.so
 vendor/lib/libAlgoServiceAdapter.so
 vendor/lib/libGLES_mali.so
 vendor/lib/libRawOrb.so
@@ -703,21 +651,14 @@ vendor/lib/libWhite_point_shift.so
 vendor/lib/lib_crypto.so
 vendor/lib/lib_hdr10plus_tm.so
 vendor/lib/libalsa_utils.so
-vendor/lib/libalsautils.so
 vendor/lib/libatci.so
-vendor/lib/libaudioclient_aidl_conversion.so
 vendor/lib/libaudiodump.so
-vendor/lib/libaudiofoundation.so
 vendor/lib/libaudiomiscctl_whale.so
 vendor/lib/libavcodec-58.so
-vendor/lib/libavservices_minijail.so
 vendor/lib/libavutil-56.so
 vendor/lib/libbqbbt.so
 vendor/lib/libbt-sprd_suite.so
 vendor/lib/libbt-ssp_bt.so
-vendor/lib/libcodec2_hidl@1.0.so
-vendor/lib/libcodec2_hidl@1.1.so
-vendor/lib/libcodec2_hidl_plugin.so
 vendor/lib/libcodec2_unisoc_avcdec.so
 vendor/lib/libcodec2_unisoc_avcenc.so
 vendor/lib/libcodec2_unisoc_common.so
@@ -736,8 +677,6 @@ vendor/lib/libcodec2_unisoc_mpeg4enc.so
 vendor/lib/libcodec2_unisoc_store.so
 vendor/lib/libcodec2_unisoc_vp8dec.so
 vendor/lib/libcodec2_unisoc_vp9dec.so
-vendor/lib/libcodec2_vndk.so
-vendor/lib/libdrm.so
 vendor/lib/libeic_trusty.so
 vendor/lib/libeng_tok.so
 vendor/lib/libengpc_adapt.so
@@ -745,7 +684,6 @@ vendor/lib/libengpcctl.so
 vendor/lib/libfacepose.so
 vendor/lib/libgnssmgt.so
 vendor/lib/libgpudataproducer.so
-vendor/lib/libhwbinder.so
 vendor/lib/libimpl-ril.so
 vendor/lib/libiwnpi.so
 vendor/lib/libjpeg_hw_sprd.so
@@ -779,19 +717,12 @@ vendor/lib/libomx_vpxdec_sw_sprd.so
 vendor/lib/libomx_vpxenc_hw_sprd.so
 vendor/lib/libpcmdump.so
 vendor/lib/libpowerhal_cli.so
-vendor/lib/libprotobuf-cpp-full-3.9.1.so
-vendor/lib/libprotobuf-cpp-lite-3.9.1.so
 vendor/lib/libril-lite.so
 vendor/lib/libril-private.so
 vendor/lib/librilcore.so
-vendor/lib/librilutils.so
 vendor/lib/librpmbclient.so
 vendor/lib/libsensorlistcfg.so
-vendor/lib/libsensorndkbridge.so
 vendor/lib/libsensornpi.so
-vendor/lib/libsfplugin_ccodec_utils.so
-vendor/lib/libshmemcompat.so
-vendor/lib/libshmemutil.so
 vendor/lib/libsoter_trusty.so
 vendor/lib/libsprd_omx_core.so
 vendor/lib/libsprd_xdr_adapter.so
@@ -800,7 +731,6 @@ vendor/lib/libsprdaudiohal_deathhandlerv7.so
 vendor/lib/libsprdaudiohalv7.so
 vendor/lib/libsprdfaceid.so
 vendor/lib/libsprdxdr.so
-vendor/lib/libstagefright_bufferpool@2.0.1.so
 vendor/lib/libstagefright_soft_mjpgdec.so
 vendor/lib/libstagefrighthw.so
 vendor/lib/libsupl.so
@@ -810,21 +740,16 @@ vendor/lib/libsysoffloadstream.so
 vendor/lib/libteec.so
 vendor/lib/libteecPlatform.so
 vendor/lib/libteeproduction.so
-vendor/lib/libtinycompress.so
 vendor/lib/libtinycompress_unisoc.so
-vendor/lib/libtinyxml.so
 vendor/lib/libtracedump.so
-vendor/lib/libtrusty.so
 vendor/lib/libtrustyHalHelper.so
 vendor/lib/libtui.so
 vendor/lib/libunisocpreprocessing.so
 vendor/lib/libvideo_share_memory.so
-vendor/lib/libvpx.so
 vendor/lib/libvsp_ca.so
 vendor/lib/libwcn-vendor.so
 vendor/lib/libwvaidl.so
 vendor/lib/oemlock_ca.so
-vendor/lib/shared-file-region-aidl-cpp.so
 vendor/lib/vendor.sprd.algoservice@1.0.so
 vendor/lib/vendor.sprd.hardware.boot@1.2.so
 vendor/lib/vendor.sprd.hardware.connmgr@1.0.so
@@ -853,7 +778,6 @@ vendor/lib/vendor.unisoc.hardware.radio.voice-V1-ndk.so
 vendor/lib/egl/libGLES_mali.so
 
 # --- vendor/lib/hw  -  32-bit HAL implementation modules ---
-vendor/lib/hw/android.hardware.boot@1.0-impl-1.2.so
 vendor/lib/hw/android.hardware.camera.provider@2.4-impl-sprd.so
 vendor/lib/hw/android.hardware.gnss@2.1-impl.so
 vendor/lib/hw/android.hardware.graphics.allocator@4.0-impl-arm.so
@@ -923,63 +847,14 @@ vendor/lib/soundfx/libbundlewrapper2.so
 vendor/lib/soundfx/libsprdvoiceprocessing.so
 
 # --- vendor/lib64  -  64-bit vendor shared libraries ---
-vendor/lib64/android.frameworks.sensorservice@1.0.so
-vendor/lib64/android.hardware.audio.common-util.so
-vendor/lib64/android.hardware.audio.common@7.0-enums.so
-vendor/lib64/android.hardware.audio.common@7.0-util.so
-vendor/lib64/android.hardware.audio.common@7.0.so
-vendor/lib64/android.hardware.audio.effect@7.0.so
-vendor/lib64/android.hardware.audio@7.0-util.so
-vendor/lib64/android.hardware.audio@7.0.so
-vendor/lib64/android.hardware.bluetooth@1.0.so
-vendor/lib64/android.hardware.bluetooth@1.1.so
-vendor/lib64/android.hardware.boot@1.0.so
-vendor/lib64/android.hardware.boot@1.1.so
-vendor/lib64/android.hardware.boot@1.2.so
-vendor/lib64/android.hardware.broadcastradio@2.0.so
-vendor/lib64/android.hardware.camera.common@1.0.so
-vendor/lib64/android.hardware.camera.device@1.0.so
-vendor/lib64/android.hardware.camera.device@3.2.so
-vendor/lib64/android.hardware.camera.device@3.3.so
-vendor/lib64/android.hardware.camera.device@3.4.so
-vendor/lib64/android.hardware.camera.device@3.5.so
-vendor/lib64/android.hardware.camera.device@3.6.so
 vendor/lib64/android.hardware.camera.provider@2.4-external-sprd.so
 vendor/lib64/android.hardware.camera.provider@2.4-legacy-sprd.so
-vendor/lib64/android.hardware.camera.provider@2.4.so
-vendor/lib64/android.hardware.cas.native@1.0.so
-vendor/lib64/android.hardware.cas@1.0.so
-vendor/lib64/android.hardware.gnss.measurement_corrections@1.0.so
-vendor/lib64/android.hardware.gnss.measurement_corrections@1.1.so
-vendor/lib64/android.hardware.gnss.visibility_control@1.0.so
-vendor/lib64/android.hardware.gnss@1.0.so
-vendor/lib64/android.hardware.gnss@1.1.so
-vendor/lib64/android.hardware.gnss@2.0.so
-vendor/lib64/android.hardware.gnss@2.1.so
-vendor/lib64/android.hardware.radio.deprecated@1.0.so
-vendor/lib64/android.hardware.radio@1.0.so
-vendor/lib64/android.hardware.radio@1.1.so
-vendor/lib64/android.hardware.radio@1.2.so
-vendor/lib64/android.hardware.secure_element@1.0.so
-vendor/lib64/android.hardware.security.keymint-V1-ndk.so
-vendor/lib64/android.hardware.sensors@1.0.so
-vendor/lib64/android.hardware.sensors@2.0-ScopedWakelock.so
-vendor/lib64/android.hardware.sensors@2.0.so
-vendor/lib64/android.hardware.sensors@2.1.so
 vendor/lib64/android.hardware.sensors@2.X-sprd_subhal.so
-vendor/lib64/android.hardware.thermal@1.0.so
-vendor/lib64/android.hardware.thermal@2.0.so
-vendor/lib64/android.hidl.allocator@1.0.so
-vendor/lib64/android.media.audio.common.types-V1-cpp.so
-vendor/lib64/android.system.keystore2-V1-ndk.so
 vendor/lib64/arm.graphics-V1-ndk.so
 vendor/lib64/arm.graphics-V1-ndk_platform.so
 vendor/lib64/arm.graphics-V2-ndk.so
 vendor/lib64/arm.graphics-V2-ndk_platform.so
 vendor/lib64/arm.graphics-V3-ndk.so
-vendor/lib64/audioclient-types-aidl-cpp.so
-vendor/lib64/av-types-aidl-cpp.so
-vendor/lib64/camera.device@1.0-impl.so
 vendor/lib64/camera.device@3.2-impl-sprd.so
 vendor/lib64/camera.device@3.3-impl-sprd.so
 vendor/lib64/camera.device@3.4-external-impl-sprd.so
@@ -988,17 +863,13 @@ vendor/lib64/camera.device@3.5-external-impl-sprd.so
 vendor/lib64/camera.device@3.5-impl-sprd.so
 vendor/lib64/camera.device@3.6-external-impl-sprd.so
 vendor/lib64/cplog_common.so
-vendor/lib64/framework-permission-aidl-cpp.so
 vendor/lib64/libAlgoServiceAdapter.so
 vendor/lib64/libGLES_mali.so
 vendor/lib64/libRawOrb.so
 vendor/lib64/libWhite_point_shift.so
 vendor/lib64/lib_crypto.so
 vendor/lib64/lib_hdr10plus_tm.so
-vendor/lib64/libalsautils.so
 vendor/lib64/libatci.so
-vendor/lib64/libaudioclient_aidl_conversion.so
-vendor/lib64/libaudiofoundation.so
 vendor/lib64/libavcodec-58.so
 vendor/lib64/libavutil-56.so
 vendor/lib64/libbt-sprd_suite.so
@@ -1006,21 +877,17 @@ vendor/lib64/libbt-ssp_bt.so
 vendor/lib64/libcodec2_unisoc_common.so
 vendor/lib64/libcodec2_unisoc_deintl.so
 vendor/lib64/libcodec2_unisoc_store.so
-vendor/lib64/libcodec2_vndk.so
-vendor/lib64/libdrm.so
 vendor/lib64/libeic_trusty.so
 vendor/lib64/libeng_tok.so
 vendor/lib64/libengbt.so
 vendor/lib64/libfacepose.so
 vendor/lib64/libgnssmgt.so
 vendor/lib64/libgpudataproducer.so
-vendor/lib64/libhwbinder.so
 vendor/lib64/libimpl-ril.so
 vendor/lib64/libiwnpi.so
 vendor/lib64/libjpeg_hw_sprd.so
 vendor/lib64/libjpegenc_sw_sprd.so
 vendor/lib64/libkernelbootcp.trusty.so
-vendor/lib64/libkeymaster_messages.so
 vendor/lib64/liblcsagent.so
 vendor/lib64/liblcscp.so
 vendor/lib64/liblcsmgt.so
@@ -1048,19 +915,12 @@ vendor/lib64/libomx_vpxdec_hw_sprd.so
 vendor/lib64/libomx_vpxdec_sw_sprd.so
 vendor/lib64/libomx_vpxenc_hw_sprd.so
 vendor/lib64/libpowerhal_cli.so
-vendor/lib64/libprotobuf-cpp-full-3.9.1.so
-vendor/lib64/libprotobuf-cpp-lite-3.9.1.so
 vendor/lib64/libril-lite.so
 vendor/lib64/libril-private.so
 vendor/lib64/librilcore.so
-vendor/lib64/librilutils.so
 vendor/lib64/librpmbclient.so
 vendor/lib64/libsensorlistcfg.so
-vendor/lib64/libsensorndkbridge.so
 vendor/lib64/libsensornpi.so
-vendor/lib64/libsfplugin_ccodec_utils.so
-vendor/lib64/libshmemcompat.so
-vendor/lib64/libshmemutil.so
 vendor/lib64/libsoter_trusty.so
 vendor/lib64/libsprd_omx_core.so
 vendor/lib64/libsprd_xdr_adapter.so
@@ -1069,7 +929,6 @@ vendor/lib64/libsprdaudiohal_deathhandlerv7.so
 vendor/lib64/libsprdaudiohalv7.so
 vendor/lib64/libsprdfaceid.so
 vendor/lib64/libsprdxdr.so
-vendor/lib64/libstagefright_bufferpool@2.0.1.so
 vendor/lib64/libstagefrighthw.so
 vendor/lib64/libsupl.so
 vendor/lib64/libswresample-3.so
@@ -1078,10 +937,7 @@ vendor/lib64/libsysoffloadstream.so
 vendor/lib64/libteec.so
 vendor/lib64/libteecPlatform.so
 vendor/lib64/libteeproduction.so
-vendor/lib64/libtinycompress.so
 vendor/lib64/libtinycompress_unisoc.so
-vendor/lib64/libtinyxml.so
-vendor/lib64/libtrusty.so
 vendor/lib64/libtrustyHalHelper.so
 vendor/lib64/libtui.so
 vendor/lib64/libvideo_share_memory.so
@@ -1089,7 +945,6 @@ vendor/lib64/libvsp_ca.so
 vendor/lib64/libwcn-vendor.so
 vendor/lib64/oemlock_ca.so
 vendor/lib64/power.sprd.so
-vendor/lib64/shared-file-region-aidl-cpp.so
 vendor/lib64/vendor.sprd.algoservice@1.0.so
 vendor/lib64/vendor.sprd.hardware.boot@1.2.so
 vendor/lib64/vendor.sprd.hardware.connmgr@1.0.so
@@ -1123,7 +978,6 @@ vendor/lib64/vendor.unisoc.hardware.radio.voice-V1-ndk.so
 vendor/lib64/egl/libGLES_mali.so
 
 # --- vendor/lib64/hw  -  64-bit HAL implementation modules ---
-vendor/lib64/hw/android.hardware.boot@1.0-impl-1.2.so
 vendor/lib64/hw/android.hardware.camera.provider@2.4-impl-sprd.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl.so
 vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-arm.so
@@ -1188,7 +1042,6 @@ vendor/usr/idc/synaptics_dsx.idc
 vendor/usr/idc/synaptics_dsx_i2c.idc
 vendor/usr/keylayout/adaptive_ts.kl
 vendor/usr/keylayout/gpio-keys.kl
-
 # ===========================================================================
 # odm (607 files)
 # ===========================================================================
@@ -1841,9 +1694,8 @@ odm/logo/timewatermark/time_vert_152x76_dth.rgba
 # --- odm/usr  -  input device configs ---
 odm/usr/idc/madev.idc
 odm/usr/keylayout/madev.kl
-
 # ===========================================================================
-# system_ext (240 files)
+# system_ext (233 files)
 # ===========================================================================
 
 # --- system_ext/app  -  Unisoc system_ext apps ---
@@ -1940,20 +1792,13 @@ system_ext/etc/init/ylog.rc
 
 # --- system_ext/etc/permissions  -  feature permission XMLs ---
 system_ext/etc/permissions/android.software.themepicker.xml
-system_ext/etc/permissions/com.android.carrierconfig.xml
 system_ext/etc/permissions/com.android.contacts.xml
 system_ext/etc/permissions/com.android.dialer.xml
-system_ext/etc/permissions/com.android.emergency.xml
 system_ext/etc/permissions/com.android.gallery3d.xml
-system_ext/etc/permissions/com.android.launcher3.xml
 system_ext/etc/permissions/com.android.mtp.xml
 system_ext/etc/permissions/com.android.music.xml
 system_ext/etc/permissions/com.android.providers.calendar.xml
 system_ext/etc/permissions/com.android.providers.contacts.xml
-system_ext/etc/permissions/com.android.provision.xml
-system_ext/etc/permissions/com.android.settings.xml
-system_ext/etc/permissions/com.android.storagemanager.xml
-system_ext/etc/permissions/com.android.systemui.xml
 system_ext/etc/permissions/com.android.telephony.wifiordataonly.xml
 system_ext/etc/permissions/com.sprd.omacp.xml
 system_ext/etc/permissions/com.spreadtrum.ims.xml
@@ -2105,7 +1950,6 @@ system_ext/priv-app/UniTelephony/UniTelephony.apk
 system_ext/priv-app/UniWifiDialog/UniWifiDialog.apk
 system_ext/priv-app/ims/ims.apk
 system_ext/priv-app/radio_interactor_service/radio_interactor_service.apk
-
 # ===========================================================================
 # system (6 files)
 # ===========================================================================
@@ -2121,4 +1965,3 @@ system/lib/libsprdssense.so
 
 # --- system/lib64  -  64-bit system libraries ---
 system/lib64/libsprdssense.so
-
