@@ -39,10 +39,10 @@
 # Blobs that implement an AOSP-named HAL but are Unisoc's own code stay, and so
 # do the AOSP interface libraries that those blobs still link against.
 #
-# Totals: 1776 entries (vendor 930, odm 607, system_ext 233, system 6).
+# Totals: 1773 entries (vendor 927, odm 607, system_ext 233, system 6).
 #
 # ===========================================================================
-# vendor (930 files)
+# vendor (927 files)
 # ===========================================================================
 
 # --- vendor/app  -  prebuilt vendor APKs ---
@@ -258,7 +258,6 @@ vendor/etc/init/android.hardware.bluetooth@1.1-service.unisoc.rc
 vendor/etc/init/android.hardware.drm-service.widevine.rc
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service.rc
 vendor/etc/init/android.hardware.media.c2@1.1-unisoc-service.rc
-vendor/etc/init/android.hardware.wifi.supplicant-service.rc
 vendor/etc/init/autotest.rc
 vendor/etc/init/charge.rc
 vendor/etc/init/charged.rc
@@ -283,7 +282,6 @@ vendor/etc/init/hw/init.ums9610_zebu_flash.rc
 vendor/etc/init/hw/init.ums9610_zebu_flash.usb.rc
 vendor/etc/init/hw/init.ums9621_1h10.rc
 vendor/etc/init/hw/init.ums9621_1h10.usb.rc
-vendor/etc/init/identity-default.rc
 vendor/etc/init/init.md.rc
 vendor/etc/init/lights.rc
 vendor/etc/init/modem_control.rc
@@ -313,7 +311,6 @@ vendor/etc/init/vendor.sprd.hardware.gnss@2.2-service.rc
 vendor/etc/init/vendor.sprd.hardware.thermal@2.0-service.rc
 vendor/etc/init/vendor.sprd.hardware.wcn@1.0-service.rc
 vendor/etc/init/vibrator.rc
-vendor/etc/init/vndservicemanager.rc
 vendor/etc/init/vowifi.rc
 vendor/etc/init/yloglite.rc
 
