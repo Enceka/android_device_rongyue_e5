@@ -90,5 +90,12 @@ BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX_LOCATION := 1
 # VINTF
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
+# Build broken
+# The generated vendor makefile (vendor/rongyue/e5/e5-vendor.mk) copies ELF
+# binaries/libraries through PRODUCT_COPY_FILES; relax the check until they are
+# migrated to cc_prebuilt_binary / cc_prebuilt_library_shared.
+# This is a BoardConfig level switch: it has no effect when set in device.mk.
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # Inherit the proprietary files
 include vendor/rongyue/e5/BoardConfigVendor.mk
