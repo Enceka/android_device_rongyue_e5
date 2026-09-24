@@ -571,14 +571,12 @@ vendor/firmware/sp5508/video0/EE_20577.bin
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service.rc
 vendor/lib/egl/libGLES_mali.so
-vendor/lib/hw/gralloc.default.so
 vendor/lib/hw/hwcomposer.unisoc.so
 vendor/lib/hw/vulkan.ums9621.so
 vendor/lib/libmediahdrtosdrtransform.so
 vendor/lib/libmemion.so
 vendor/lib/vendor.sprd.hardware.enhance-V1-ndk.so
 vendor/lib64/egl/libGLES_mali.so
-vendor/lib64/hw/gralloc.default.so
 vendor/lib64/hw/hwcomposer.unisoc.so
 vendor/lib64/hw/vulkan.ums9621.so
 vendor/lib64/libmediahdrtosdrtransform.so
@@ -705,14 +703,11 @@ vendor/etc/sensors/hals.conf
 # Vibrator
 
 # Wi-Fi
-vendor/bin/hw/android.hardware.wifi@1.0-service
 vendor/bin/hw/hostapd
 vendor/bin/hw/wpa_supplicant
 vendor/etc/init/android.hardware.wifi.supplicant-service.rc
 vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
 vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml
-vendor/lib/libwifi-hal.so
-vendor/lib64/libwifi-hal.so
 
 # Wi-Fi configs
 vendor/etc/wifi/vendor_hals/unisoc_wifi_hal_arm64.xml
