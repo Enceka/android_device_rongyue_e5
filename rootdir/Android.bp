@@ -73,48 +73,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.ums9610_haps.rc",
-    src: "etc/init.ums9610_haps.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.ums9610_haps.usb.rc",
-    src: "etc/init.ums9610_haps.usb.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.ums9610_zebu.rc",
-    src: "etc/init.ums9610_zebu.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.ums9610_zebu.usb.rc",
-    src: "etc/init.ums9610_zebu.usb.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.ums9610_zebu_flash.rc",
-    src: "etc/init.ums9610_zebu_flash.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.ums9610_zebu_flash.usb.rc",
-    src: "etc/init.ums9610_zebu_flash.usb.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.ums9621_1h10.rc",
     src: "etc/init.ums9621_1h10.rc",
     sub_dir: "init/hw",
@@ -130,7 +88,20 @@ prebuilt_etc {
 
 // fstab
 prebuilt_etc {
-    name: "fstab.cali",
-    src: "etc/fstab.cali",
+    name: "fstab.ums9158_1h10",
+    src: "etc/fstab.ums9158_1h10",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "fstab.ums9621_1h10",
+    src: "etc/fstab.ums9621_1h10",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.enableswap",
+    src: "etc/fstab.enableswap",
+    vendor: true,
+}
+
