@@ -5,11 +5,6 @@
 
 DEVICE_PATH := device/rongyue/e5
 
-# A/B
-AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS +=
-BOARD_USES_RECOVERY_AS_BOOT := true
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a

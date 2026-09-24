@@ -1,55 +1,31 @@
 # Unpinned blobs from s9863a1h10_Natv-userdebug 13 TP1A.220624.014 10413 test-keys
 
 # Audio
-vendor/bin/hw/android.hardware.audio.service
-vendor/etc/init/android.hardware.audio.service.rc
-vendor/lib/hw/android.hardware.audio.effect@7.0-impl.so
-vendor/lib/hw/android.hardware.audio@7.1-impl.so
-vendor/lib/hw/audio.primary.default.so
 vendor/lib/hw/audio.primary.whale.so
-vendor/lib/hw/audio.r_submix.default.so
-vendor/lib/hw/audio.usb.default.so
 vendor/lib/libalsa_utils.so
-vendor/lib/libalsautils.so
 vendor/lib/libatci.so
 vendor/lib/libaudiodump.so
 vendor/lib/libaudiomiscctl_whale.so
-vendor/lib/libmediautils_vendor.so
 vendor/lib/libpcmdump.so
 vendor/lib/libpowerhal_cli.so
 vendor/lib/libtinycompress_unisoc.so
-vendor/lib/libtinyxml.so
 vendor/lib/libunisocpreprocessing.so
 vendor/lib/vendor.unisoc.hardware.power-V1-ndk.so
 vendor/lib/vendor.unisoc.hardware.radio-V1-ndk.so
 vendor/lib/vendor.unisoc.hardware.radio.modem-V1-ndk.so
-vendor/lib64/hw/android.hardware.audio.effect@7.0-impl.so
-vendor/lib64/hw/android.hardware.audio@7.1-impl.so
-vendor/lib64/hw/audio.primary.default.so
-vendor/lib64/hw/audio.r_submix.default.so
-vendor/lib64/hw/audio.usb.default.so
-vendor/lib64/libalsautils.so
 vendor/lib64/libatci.so
-vendor/lib64/libmediautils_vendor.so
 vendor/lib64/libpowerhal_cli.so
 vendor/lib64/libtinycompress_unisoc.so
-vendor/lib64/libtinyxml.so
 vendor/lib64/vendor.unisoc.hardware.power-V1-ndk.so
 vendor/lib64/vendor.unisoc.hardware.radio-V1-ndk.so
 vendor/lib64/vendor.unisoc.hardware.radio.modem-V1-ndk.so
 
 # Audio (FX modules)
 vendor/lib/soundfx/libbundlewrapper2.so
-vendor/lib/soundfx/libdynproc.so
-vendor/lib/soundfx/libhapticgenerator.so
 vendor/lib/soundfx/libsprdvoiceprocessing.so
 vendor/lib/libsprdaudiohalv7.so
-vendor/lib/libvibrator.so
 vendor/lib64/soundfx/libbundlewrapper2.so
-vendor/lib64/soundfx/libdynproc.so
-vendor/lib64/soundfx/libhapticgenerator.so
 vendor/lib64/libsprdaudiohalv7.so
-vendor/lib64/libvibrator.so
 
 # Audio configs
 etc/audio_effects.conf
@@ -92,22 +68,12 @@ vendor/bin/hw/android.hardware.bluetooth@1.1-service.unisoc
 vendor/etc/init/android.hardware.bluetooth@1.1-service.unisoc.rc
 
 # Bluetooth (A2DP)
-vendor/lib/hw/audio.bluetooth.default.so
 vendor/lib/hw/audio.bluetooth.ums9621.so
-vendor/lib/android.hardware.bluetooth.audio-impl.so
-vendor/lib/libbluetooth_audio_session.so
-vendor/lib/libbluetooth_audio_session_aidl.so
 vendor/lib/libsysoffloadstream.so
-vendor/lib64/hw/audio.bluetooth.default.so
 vendor/lib64/hw/audio.bluetooth.ums9621.so
-vendor/lib64/android.hardware.bluetooth.audio-impl.so
-vendor/lib64/libbluetooth_audio_session.so
-vendor/lib64/libbluetooth_audio_session_aidl.so
 vendor/lib64/libsysoffloadstream.so
 
 # Broadcast radio
-vendor/lib/hw/android.hardware.broadcastradio@1.0-impl.so
-vendor/lib64/hw/android.hardware.broadcastradio@1.0-impl.so
 
 # Camera
 odm/lib/hw/camera.ums9621.so
@@ -406,9 +372,6 @@ odm/lib64/libunnengine.so
 odm/lib64/libverify.so
 odm/lib64/libxtm.so
 odm/lib64/libyuv420_scaler.so
-vendor/bin/hw/android.hardware.camera.provider@2.4-service
-vendor/etc/init/android.hardware.camera.provider@2.4-service.rc
-vendor/lib/camera.device@1.0-impl.so
 vendor/lib/camera.device@3.2-impl-sprd.so
 vendor/lib/camera.device@3.3-impl-sprd.so
 vendor/lib/camera.device@3.4-external-impl-sprd.so
@@ -416,7 +379,6 @@ vendor/lib/camera.device@3.4-impl-sprd.so
 vendor/lib/camera.device@3.5-external-impl-sprd.so
 vendor/lib/camera.device@3.5-impl-sprd.so
 vendor/lib/camera.device@3.6-external-impl-sprd.so
-vendor/lib64/camera.device@1.0-impl.so
 vendor/lib64/camera.device@3.2-impl-sprd.so
 vendor/lib64/camera.device@3.3-impl-sprd.so
 vendor/lib64/camera.device@3.4-external-impl-sprd.so
@@ -604,15 +566,10 @@ vendor/firmware/sp5508/video0/EE_20577.bin
 
 
 # CAS
-vendor/bin/hw/android.hardware.cas@1.2-service
-vendor/etc/init/android.hardware.cas@1.2-service.rc
-vendor/etc/vintf/manifest/android.hardware.cas@1.2-service.xml
 
 # Display
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service
-vendor/bin/hw/android.hardware.graphics.composer@2.4-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service.rc
-vendor/etc/init/android.hardware.graphics.composer@2.4-service.rc
 vendor/lib/egl/libGLES_mali.so
 vendor/lib/hw/gralloc.default.so
 vendor/lib/hw/hwcomposer.unisoc.so
@@ -624,23 +581,15 @@ vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/hw/gralloc.default.so
 vendor/lib64/hw/hwcomposer.unisoc.so
 vendor/lib64/hw/vulkan.ums9621.so
-vendor/lib64/libhwc2onfbadapter.so
 vendor/lib64/libmediahdrtosdrtransform.so
 vendor/lib64/libmemion.so
 vendor/lib64/vendor.sprd.hardware.enhance-V1-ndk.so
 
 # DRM
-vendor/bin/hw/android.hardware.drm-service.clearkey
 vendor/bin/hw/android.hardware.drm-service.widevine
-vendor/etc/init/android.hardware.drm-service.clearkey.rc
 vendor/etc/init/android.hardware.drm-service.widevine.rc
-vendor/etc/vintf/manifest/android.hardware.drm-service.clearkey.xml
 vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml
-vendor/lib/mediacas/libclearkeycasplugin.so
-vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/libwvaidl.so
-vendor/lib64/mediacas/libclearkeycasplugin.so
-vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 
 # Engineer Apps -- Unisoc system_ext apps ---
 system_ext/app/CamTa/CamTa.apk
@@ -653,14 +602,8 @@ system_ext/app/UnisocStk/UnisocStk.apk
 system_ext/app/ValidationTools/ValidationTools.apk
 
 # Fingerprint
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
-vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml
 
 # Gatekeeper
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service.software
-vendor/etc/init/android.hardware.gatekeeper@1.0-service.software.rc
-vendor/etc/vintf/manifest/android.hardware.gatekeeper@1.0-service.software.xml
 
 # GNSS
 vendor/lib/hw/android.hardware.gnss@2.1-impl.so
@@ -669,50 +612,23 @@ vendor/lib64/hw/android.hardware.gnss@2.1-impl.so
 vendor/lib64/hw/gps.default.so
 
 # Health
-vendor/bin/hw/android.hardware.health-service.example
-vendor/etc/init/android.hardware.health-service.example.rc
-vendor/etc/vintf/manifest/android.hardware.health-service.example.xml
 
 # Identity
 vendor/bin/hw/android.hardware.identity-service.trusty
 vendor/lib/libeic_trusty.so
-vendor/lib/libtrusty.so
 vendor/lib64/libeic_trusty.so
-vendor/lib64/libtrusty.so
 
 # Local time
-vendor/lib/hw/local_time.default.so
-vendor/lib64/hw/local_time.default.so
 
 # Media
-etc/seccomp_policy/mediacodec.policy
-lib/libmedia_codeclist.so
-lib/libstagefright_bufferpool@2.0.1.so
-lib/libstagefright_codecbase.so
-lib/libstagefright_framecapture_utils.so
-lib/libstagefright_surface_utils.so
-lib64/libmedia_codeclist.so
-lib64/libstagefright_bufferpool@2.0.1.so
-lib64/libstagefright_codecbase.so
-lib64/libstagefright_framecapture_utils.so
-lib64/libstagefright_surface_utils.so
 vendor/bin/hw/android.hardware.media.c2@1.1-unisoc-service
-vendor/bin/hw/android.hardware.media.omx@1.0-service
 vendor/etc/init/android.hardware.media.c2@1.1-unisoc-service.rc
-vendor/etc/init/android.hardware.media.omx@1.0-service.rc
-vendor/lib/libcodec2_hidl@1.1.so
-vendor/lib/libcodec2_hidl_plugin.so
 vendor/lib/libcodec2_unisoc_common.so
 vendor/lib/libcodec2_unisoc_store.so
-vendor/lib/libsfplugin_ccodec_utils.so
-vendor/lib/libstagefright_bufferpool@2.0.1.so
 vendor/lib/libstagefright_soft_mjpgdec.so
-vendor/lib/libstagefright_softomx_plugin.so
 vendor/lib/libstagefrighthw.so
 vendor/lib64/libcodec2_unisoc_common.so
 vendor/lib64/libcodec2_unisoc_store.so
-vendor/lib64/libsfplugin_ccodec_utils.so
-vendor/lib64/libstagefright_bufferpool@2.0.1.so
 vendor/lib64/libstagefrighthw.so
 
 # Media configs
@@ -739,12 +655,8 @@ vendor/etc/media_profiles_v3.xml
 vendor/etc/media_profiles_v4.xml
 
 # NFC configs
-etc/libnfc-nci.conf
 
 # Power
-vendor/bin/hw/android.hardware.power.stats-service.example
-vendor/lib/hw/power.default.so
-vendor/lib64/hw/power.default.so
 
 # Radio
 system_ext/etc/init/dataLogDaemon.rc
@@ -772,26 +684,14 @@ vendor/lib64/vendor.unisoc.hardware.radio.voice-V1-ndk.so
 system_ext/priv-app/ims/ims.apk
 
 # Reboot escrow
-vendor/bin/hw/android.hardware.rebootescrow-service.default
 
 # RenderScript
-vendor/lib/hw/android.hardware.renderscript@1.0-impl.so
-vendor/lib64/hw/android.hardware.renderscript@1.0-impl.so
 
 # Security
-vendor/bin/hw/android.hardware.security.keymint-service
-vendor/etc/init/android.hardware.security.keymint-service.rc
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service.xml
-vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.xml
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.xml
-vendor/lib64/lib_android_keymaster_keymint_utils.so
-vendor/lib64/libcppbor_external.so
-vendor/lib64/libkeymint.so
 
 # Sensors
-vendor/bin/hw/android.hardware.sensors-service.multihal
-vendor/etc/init/android.hardware.sensors-service-multihal.rc
-vendor/etc/vintf/manifest/android.hardware.sensors-multihal.xml
 vendor/lib/hw/sensors.unisoc.so
 vendor/lib/libsensorlistcfg.so
 vendor/lib64/hw/sensors.unisoc.so
@@ -801,18 +701,10 @@ vendor/lib64/libsensorlistcfg.so
 vendor/etc/sensors/hals.conf
 
 # Thermal
-vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.xml
-vendor/lib/hw/thermal.default.so
-vendor/lib64/hw/thermal.default.so
 
 # USB
-vendor/bin/hw/android.hardware.usb-service.example
-vendor/etc/init/android.hardware.usb-service.example.rc
-vendor/etc/vintf/manifest/android.hardware.usb-service.example.xml
 
 # Vibrator
-vendor/lib/hw/vibrator.default.so
-vendor/lib64/hw/vibrator.default.so
 
 # Wi-Fi
 vendor/bin/hw/android.hardware.wifi@1.0-service
@@ -824,8 +716,6 @@ vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
 vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml
 vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
 vendor/lib/libwifi-hal.so
-vendor/lib64/libkeystore-engine-wifi-hidl.so
-vendor/lib64/libkeystore-wifi-hidl.so
 vendor/lib64/libwifi-hal.so
 
 # Wi-Fi configs
@@ -1310,8 +1200,6 @@ vendor/bin/power/paras/tool/paras
 vendor/bin/power/tops/tops
 vendor/bin/VtsHalEnhanceTest
 vendor/bin/audiodumpclient
-vendor/bin/boringssl_self_test32
-vendor/bin/boringssl_self_test64
 vendor/bin/btools
 vendor/bin/charge
 vendor/bin/charged
@@ -1321,7 +1209,6 @@ vendor/bin/cp_diskserver
 vendor/bin/cp_dump_dbg
 vendor/bin/cplogctl
 vendor/bin/dcxsrv
-vendor/bin/dumpsys
 vendor/bin/engpc
 vendor/bin/engpcctl
 vendor/bin/enhance_test
@@ -1371,7 +1258,6 @@ vendor/etc/icap/control/scenes/Type_DFX.xml
 vendor/etc/icap/control/scenes/Type_ISS.xml
 vendor/etc/icap/control/IcapSwitchs.xml
 vendor/etc/init/autotest.rc
-vendor/etc/init/boringssl_self_test.rc
 vendor/etc/init/charge.rc
 vendor/etc/init/charged.rc
 vendor/etc/init/connmgr.rc
@@ -1381,15 +1267,12 @@ vendor/etc/init/dcxsrv.rc
 vendor/etc/init/engpc.rc
 vendor/etc/init/enhance-default.rc
 vendor/etc/init/hostapd.android.rc
-vendor/etc/init/identity-default.rc
 vendor/etc/init/init.md.rc
 vendor/etc/init/lights.rc
 vendor/etc/init/memtrack.rc
 vendor/etc/init/modem_control.rc
 vendor/etc/init/network-default.rc
 vendor/etc/init/phasecheckserver.rc
-vendor/etc/init/power.stats-default.rc
-vendor/etc/init/rebootescrow-default.rc
 vendor/etc/init/refnotify.rc
 vendor/etc/init/rpmbserver.rc
 vendor/etc/init/slogmodem_vendor.rc
@@ -1413,7 +1296,6 @@ vendor/etc/init/vendor.sprd.hardware.gnss@2.2-service.rc
 vendor/etc/init/vendor.sprd.hardware.thermal@2.0-service.rc
 vendor/etc/init/vendor.sprd.hardware.wcn@1.0-service.rc
 vendor/etc/init/vibrator.rc
-vendor/etc/init/vndservicemanager.rc
 vendor/etc/init/vowifi.rc
 vendor/etc/init/yloglite.rc
 vendor/etc/operator_config/au_config.xml
@@ -1430,20 +1312,15 @@ vendor/etc/parameter-framework/ParameterFrameworkConfigurationPolicy.xml
 vendor/etc/raw_mfnr/raw_mfnr/const_file.txt
 vendor/etc/raw_mfnr/raw_mfnr/raw_mfnr_tuning.txt
 vendor/etc/seccomp_policy/android.hardware.media.c2@1.1-unisoc-seccomp_policy
-vendor/etc/seccomp_policy/mediaextractor.policy
 vendor/etc/sinput/NVTCapacitiveTouchScreen.conf
 vendor/etc/sinput/fts_ts.conf
-vendor/etc/vintf/manifest/bluetooth_audio.xml
 vendor/etc/vintf/manifest/cplog_svc-default.xml
 vendor/etc/vintf/manifest/enhance-default.xml
-vendor/etc/vintf/manifest/identity-default.xml
 vendor/etc/vintf/manifest/lights.xml
 vendor/etc/vintf/manifest/manifest_dualsim.xml
 vendor/etc/vintf/manifest/manifest_media_c2_V1_1_unisoc.xml
 vendor/etc/vintf/manifest/memtrack.xml
 vendor/etc/vintf/manifest/network-default.xml
-vendor/etc/vintf/manifest/power.stats-default.xml
-vendor/etc/vintf/manifest/rebootescrow-default.xml
 vendor/etc/vintf/manifest/soter_default.xml
 vendor/etc/vintf/manifest/trusty-default.xml
 vendor/etc/vintf/manifest/tui-default.xml
@@ -1467,7 +1344,6 @@ vendor/etc/config.xml
 vendor/etc/cp_dump_info.xml
 vendor/etc/deviceidle.xml
 vendor/etc/dynamic_debug_config.xml
-vendor/etc/fstab.cali
 vendor/etc/fstab.charge_mode
 vendor/etc/fstab.enableswap
 vendor/etc/fstab.ums9158_1h10
@@ -1482,7 +1358,6 @@ vendor/etc/log_settings_autotest.xml
 vendor/etc/log_settings_cali.xml
 vendor/etc/log_settings_factory.xml
 vendor/etc/log_settings_lite.xml
-vendor/etc/mkshrc
 vendor/etc/modem_ch_info.xml
 vendor/etc/modem_cp_info.xml
 vendor/etc/modem_sp_info.xml
@@ -1504,9 +1379,7 @@ vendor/etc/slog_modem_factory.conf
 vendor/etc/sprd_hdr_tuning.param
 vendor/etc/supl.xml
 vendor/etc/suplrootca.pem
-vendor/etc/task_profiles.json
 vendor/etc/thermal.conf
-vendor/etc/ueventd.rc
 vendor/etc/uniber.conf
 vendor/etc/ylog.conf.debug
 vendor/etc/ylog.conf.factorytest
@@ -1530,9 +1403,7 @@ vendor/firmware/soter.elf
 vendor/firmware/tui_ta_demo.elf
 vendor/firmware/vecft-en-US.elf
 vendor/firmware/vecft-zh.elf
-vendor/framework/androidx.camera.extensions.impl.jar
 vendor/lib/hw/audio.dp.ums9621.so
-vendor/lib/hw/bootctrl.default.so
 vendor/lib/hw/dpu.unisoc.so
 vendor/lib/hw/enhance.unisoc.so
 vendor/lib/hw/gsp.unisoc.so
@@ -1589,9 +1460,6 @@ vendor/lib/arm.graphics-V1-ndk_platform.so
 vendor/lib/arm.graphics-V2-ndk.so
 vendor/lib/arm.graphics-V2-ndk_platform.so
 vendor/lib/arm.graphics-V3-ndk.so
-vendor/lib/audioclient-types-aidl-cpp.so
-vendor/lib/av-types-aidl-cpp.so
-vendor/lib/framework-permission-aidl-cpp.so
 vendor/lib/libAlgoServiceAdapter.so
 vendor/lib/libGLES_mali.so
 vendor/lib/libOpenCL.so
@@ -1602,14 +1470,11 @@ vendor/lib/libRawOrb.so
 vendor/lib/libWhite_point_shift.so
 vendor/lib/lib_crypto.so
 vendor/lib/lib_hdr10plus_tm.so
-vendor/lib/libaudioclient_aidl_conversion.so
-vendor/lib/libaudiofoundation.so
 vendor/lib/libavcodec-58.so
 vendor/lib/libavutil-56.so
 vendor/lib/libbqbbt.so
 vendor/lib/libbt-sprd_suite.so
 vendor/lib/libbt-ssp_bt.so
-vendor/lib/libcamera2ndk_vendor.so
 vendor/lib/libcodec2_unisoc_avcdec.so
 vendor/lib/libcodec2_unisoc_avcenc.so
 vendor/lib/libcodec2_unisoc_deintl.so
@@ -1664,10 +1529,7 @@ vendor/lib/libomx_vpxenc_hw_sprd.so
 vendor/lib/libril-lite.so
 vendor/lib/libril-private.so
 vendor/lib/librpmbclient.so
-vendor/lib/libsensorndkbridge.so
 vendor/lib/libsensornpi.so
-vendor/lib/libshmemcompat.so
-vendor/lib/libshmemutil.so
 vendor/lib/libsoter_trusty.so
 vendor/lib/libsprd_omx_core.so
 vendor/lib/libsprd_xdr_adapter.so
@@ -1685,12 +1547,10 @@ vendor/lib/libtracedump.so
 vendor/lib/libtrustyHalHelper.so
 vendor/lib/libtui.so
 vendor/lib/libvideo_share_memory.so
-vendor/lib/libvpx.so
 vendor/lib/libvsp_ca.so
 vendor/lib/libwcn-vendor.so
 vendor/lib/libwpa_client.so
 vendor/lib/oemlock_ca.so
-vendor/lib/shared-file-region-aidl-cpp.so
 vendor/lib/vendor.sprd.algoservice@1.0.so
 vendor/lib/vendor.sprd.hardware.boot@1.2.so
 vendor/lib/vendor.sprd.hardware.connmgr@1.0.so
@@ -1704,7 +1564,6 @@ vendor/lib/vendor.sprd.hardware.tui@1.0.so
 vendor/lib/vendor.sprd.hardware.wcn@1.0.so
 vendor/lib/vendor.unisoc.hardware.radio.lite-V1-ndk.so
 vendor/lib64/hw/audio.dp.ums9621.so
-vendor/lib64/hw/bootctrl.default.so
 vendor/lib64/hw/dpu.unisoc.so
 vendor/lib64/hw/enhance.unisoc.so
 vendor/lib64/hw/gsp.unisoc.so
@@ -1729,10 +1588,7 @@ vendor/lib64/arm.graphics-V1-ndk_platform.so
 vendor/lib64/arm.graphics-V2-ndk.so
 vendor/lib64/arm.graphics-V2-ndk_platform.so
 vendor/lib64/arm.graphics-V3-ndk.so
-vendor/lib64/audioclient-types-aidl-cpp.so
-vendor/lib64/av-types-aidl-cpp.so
 vendor/lib64/cplog_common.so
-vendor/lib64/framework-permission-aidl-cpp.so
 vendor/lib64/libAlgoServiceAdapter.so
 vendor/lib64/libGLES_mali.so
 vendor/lib64/libOpenCL.so
@@ -1743,16 +1599,11 @@ vendor/lib64/libRawOrb.so
 vendor/lib64/libWhite_point_shift.so
 vendor/lib64/lib_crypto.so
 vendor/lib64/lib_hdr10plus_tm.so
-vendor/lib64/libaudioclient_aidl_conversion.so
-vendor/lib64/libaudiofoundation.so
 vendor/lib64/libavcodec-58.so
 vendor/lib64/libavutil-56.so
-vendor/lib64/libbinderdebug.so
 vendor/lib64/libbt-sprd_suite.so
 vendor/lib64/libbt-ssp_bt.so
-vendor/lib64/libcamera2ndk_vendor.so
 vendor/lib64/libcodec2_unisoc_deintl.so
-vendor/lib64/libcppcose_rkp.so
 vendor/lib64/libeng_tok.so
 vendor/lib64/libengbt.so
 vendor/lib64/libfacepose.so
@@ -1790,11 +1641,7 @@ vendor/lib64/libomx_vpxenc_hw_sprd.so
 vendor/lib64/libril-lite.so
 vendor/lib64/libril-private.so
 vendor/lib64/librpmbclient.so
-vendor/lib64/libsensorndkbridge.so
 vendor/lib64/libsensornpi.so
-vendor/lib64/libshmemcompat.so
-vendor/lib64/libshmemutil.so
-vendor/lib64/libsoft_attestation_cert.so
 vendor/lib64/libsoter_trusty.so
 vendor/lib64/libsprd_omx_core.so
 vendor/lib64/libsprd_xdr_adapter.so
@@ -1816,7 +1663,6 @@ vendor/lib64/libwcn-vendor.so
 vendor/lib64/libwpa_client.so
 vendor/lib64/oemlock_ca.so
 vendor/lib64/power.sprd.so
-vendor/lib64/shared-file-region-aidl-cpp.so
 vendor/lib64/vendor.sprd.algoservice@1.0.so
 vendor/lib64/vendor.sprd.hardware.boot@1.2.so
 vendor/lib64/vendor.sprd.hardware.connmgr@1.0.so

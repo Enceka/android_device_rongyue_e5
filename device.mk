@@ -8,7 +8,25 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
-
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS += \
+    boot \
+    init_boot \
+    dtbo \
+    vendor_boot \
+    system \
+    system_ext \
+    product \
+    vendor \
+    odm \
+    vendor_dlkm \
+    vbmeta \
+    vbmeta_system \
+    vbmeta_vendor
+BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
+BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_BUILD_SUPER_PARTITION := true
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
