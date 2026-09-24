@@ -688,8 +688,6 @@ system_ext/priv-app/ims/ims.apk
 # RenderScript
 
 # Security
-vendor/etc/vintf/manifest/android.hardware.security.keymint-service.xml
-vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.xml
 
 # Sensors
 vendor/lib/hw/sensors.unisoc.so

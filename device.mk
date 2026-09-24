@@ -75,7 +75,8 @@ PRODUCT_PACKAGES += \
     speedrestrictor.sh \
 
 PRODUCT_PACKAGES += \
-    fstab.cali \
+    fstab.ums9158_1h10 \
+    fstab.ums9621_1h10 \
     init.cali.rc \
     init.ram.gms.rc \
     init.ram.native.rc \
@@ -83,17 +84,17 @@ PRODUCT_PACKAGES += \
     init.storage.rc \
     init.ums9158_1h10.rc \
     init.ums9158_1h10.usb.rc \
-    init.ums9610_haps.rc \
-    init.ums9610_haps.usb.rc \
-    init.ums9610_zebu.rc \
-    init.ums9610_zebu.usb.rc \
-    init.ums9610_zebu_flash.rc \
-    init.ums9610_zebu_flash.usb.rc \
     init.ums9621_1h10.rc \
     init.ums9621_1h10.usb.rc \
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.cali:$(TARGET_VENDOR_RAMDISK_OUT)/first_stage_ramdisk/fstab.cali
+    $(LOCAL_PATH)/rootdir/etc/fstab.ums9158_1h10:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.ums9158_1h10 \
+    $(LOCAL_PATH)/rootdir/etc/fstab.ums9621_1h10:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.ums9621_1h10
+
+# The recovery ramdisk
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.ums9158_1h10:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.ums9158_1h10 \
+    $(LOCAL_PATH)/rootdir/etc/fstab.ums9621_1h10:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.ums9621_1h10
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
