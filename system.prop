@@ -39,7 +39,6 @@ pm.dexopt.install-fast=skip
 pm.dexopt.post-boot=extract
 pm.dexopt.shared=speed
 ro.actionable_compatible_property.enabled=true
-ro.allow.mock.location=0
 ro.android.bluename=E5
 ro.boot.vendor.overlay.theme=com.waterworld.update.overlay
 ro.cta.hardware.model=E5
