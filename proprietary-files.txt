@@ -709,10 +709,8 @@ vendor/bin/hw/android.hardware.wifi@1.0-service
 vendor/bin/hw/hostapd
 vendor/bin/hw/wpa_supplicant
 vendor/etc/init/android.hardware.wifi.supplicant-service.rc
-vendor/etc/init/android.hardware.wifi@1.0-service.rc
 vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
 vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml
-vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
 vendor/lib/libwifi-hal.so
 vendor/lib64/libwifi-hal.so
 
@@ -1343,12 +1341,9 @@ vendor/etc/cp_dump_info.xml
 vendor/etc/deviceidle.xml
 vendor/etc/dynamic_debug_config.xml
 vendor/etc/fstab.charge_mode
-vendor/etc/fstab.enableswap
-vendor/etc/fstab.ums9158_1h10
 vendor/etc/fstab.ums9610_haps
 vendor/etc/fstab.ums9610_zebu
 vendor/etc/fstab.ums9610_zebu_flash
-vendor/etc/fstab.ums9621_1h10
 vendor/etc/imsUserAgent.xml
 vendor/etc/lmkd_param.conf
 vendor/etc/log_settings.xml
